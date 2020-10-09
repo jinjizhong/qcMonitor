@@ -1,0 +1,19 @@
+$bg-color-primary: #ffffff;
+/* 主题颜色 */
+$bg-color-primary-bigScreen: #04061d;
+/* 更换的颜色 #04061d #00000a */
+
+@mixin bg_color_primary($color) {
+  /*通过该函数设置字体颜色，后期方便统一管理；*/
+  background-color: $color;
+
+  [data-theme='default'] & {
+    background-color: $bg-color-primary !important;
+  }
+
+  [data-theme='bigScreen'] & {
+    background-color: $bg-color-primary-bigScreen !important;
+  }
+}
+
+/* 更换背景颜色采用上面一样的逻辑 */
